@@ -23,7 +23,9 @@ public class ArticleService {
         return articleRepository.findById(id);
     }
 
-    public boolean delete(int id) {
-        return articleRepository.delete(id);
+    public void delete(long id) {
+        articleRepository.delete(id);
     }
+
+
 }

@@ -66,7 +66,7 @@ public class ArticleController {
             return;
         }
 
-        articleService.delete((int)id);
+        articleService.delete(id);
         rq.appendBody("%d번 게시물이 삭제되었습니다.".formatted(id));
     }
 }
