@@ -8,10 +8,7 @@
 
 <%@ include file="../common/head.jspf"%>
 
-<!-- 보통 구획은 섹션으로 나눈다. -->
 <section>
-    <!-- container(max-width) : 너비가 너무 넓게 퍼지는 것을 막는다 + 반응형은 잃지 않는다. -->
-    <!-- mx-auto : margin-left:auto; margin-right:auto; -->
     <div class="container px-3 mx-auto">
         <h1 class="font-bold text-lg">게시물 리스트</h1>
 
