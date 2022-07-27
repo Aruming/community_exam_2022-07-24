@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.ll.exam.article.dto.ArticleDto" %>
-
-<%
-    ArticleDto article = (ArticleDto)request.getAttribute("article");
-%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@ include file="../common/head.jspf"%>
 
@@ -12,17 +8,17 @@
         <h1 class="font-bold text-lg">게시물 상세페이지</h1>
 
         <div>
-            <% if ( article != null ) { %>
+            <c:if test="${article!=null}">
             <div>
-                ID : <%=article.getId()%>
+                ID : ${article.id}
             </div>
             <div>
-                TITLE : <%=article.getTitle()%>
+                TITLE : ${article.title}
             </div>
             <div>
-                BODY : <%=article.getBody()%>
+                BODY : ${article.body}
             </div>
-            <% } %>
+            </c:if>
         </div>
     </div>
 </section>
