@@ -36,4 +36,15 @@ public class ArticleRepository {
 
         return null;
     }
+
+    public boolean delete(int id) {
+        ArticleDto articleDto = findById(id);
+
+        if(articleDto==null){
+            return false;
+        }
+        datum.remove(articleDto);
+
+        return true;
+    }
 }

@@ -22,9 +22,14 @@ public class DispatchServlet extends HttpServlet {
         switch (rq.getMethod()){
             case "GET":
                 switch (rq.getActionPath()) {
+                    case "/usr/article/delete":
+                        articleController.delete(rq);
+                        break;
+
                     case "/usr/article/detail":
                         articleController.showDetail(rq);
                         break;
+
                     case "/usr/article/list":
                         articleController.showList(rq);
                         break;
